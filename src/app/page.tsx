@@ -1,101 +1,106 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
+'use client'
+
+import { motion } from 'framer-motion';
+import { Forum } from 'next/font/google';
+import "swiper/css";
+import "swiper/css/navigation";
+import HomeProducts from '../app/_components/HomeProducts';
+
+const forum = Forum({
+  weight: '400',
+  subsets: ['latin'],
+});
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main>
+      <div className="relative w-screen h-screen">
+        <div className="absolute inset-0 bg-cover bg-center bg-fixed bg-[url('/maisonn.jpeg')] sm:bg-[url('/dsng2.png')] z-0" />
+        <div className="absolute inset-0 bg-black/30 z-10" />
+      </div>
+      <section className="w-full py-40 bg-white dark:bg-zinc-900">
+        <div className="max-w-7xl px-4 mx-auto grid md:grid-cols-2 gap-10 items-start">
+          <div className="space-y-6 text-zinc-800 dark:text-white">
+            <h2 className={`${forum.className} text-3xl sm:text-6xl`}>SOBRE NÓS</h2>
+            <p className={`${forum.className} text-2xl leading-9`}>
+              Maison Privée é o nome dado ao projeto que visa facilitar o acesso dos brasileiros às grandes marcas estrangeiras e, muitas vezes, de tão difícil acesso.
+              Somos uma empresa de serviço fiel ao consumidor, onde se pode alcançar, sem burocracias, os itens mais desejados mundialmente.
+            </p>
+            <p className="text-base text-zinc-600 dark:text-zinc-300">
+              Sua história merece ser escrita com os detalhes certos — e estamos aqui para isso.
+            </p>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          {/* Imagens desktop */}
+          <div className="hidden lg:flex justify-end pr-12 gap-6 relative">
+            <div className="relative mt-23 w-[260px] h-[320px]">
+              <img src="/im1.jpeg" alt="Imagem 1" className="object-cover w-full h-full shadow-md" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10">
+                <span className={`${forum.className} text-5xl italic text-black drop-shadow-md`}>beleza</span>
+              </div>
+            </div>
+            <div className="relative w-[220px] h-[280px]">
+              <img src="/im2.jpeg" alt="Imagem 2" className="object-cover w-full h-full shadow-md" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10">
+                <span className={`${forum.className} text-5xl italic text-black drop-shadow-md`}>moda</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Imagens mobile/tablet */}
+          <div className="flex lg:hidden justify-center gap-4 mt-8">
+            <div className="relative w-[140px] h-[180px]">
+              <img src="/im1.jpeg" alt="Imagem 1" className="object-cover w-full h-full shadow-md" />
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-10">
+                <span className={`${forum.className} text-2xl italic text-black drop-shadow-md`}>beleza</span>
+              </div>
+            </div>
+            <div className="relative w-[140px] h-[180px]">
+              <img src="/im2.jpeg" alt="Imagem 2" className="object-cover w-full h-full shadow-md" />
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-10">
+                <span className={`${forum.className} text-2xl italic text-black drop-shadow-md`}>moda</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+
+      {/* PRODUTOS EM DESTAQUE */}
+      <HomeProducts />
+
+      {/* PROPÓSITO */}
+      <section className="w-full py-45 bg-fixed bg-center bg-cover bg-[url('/imr.jpeg')] relative">
+        <div className="absolute inset-0 bg-black/75" />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="relative z-10 max-w-3xl mx-auto px-6 text-center space-y-6 "
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          <h2 className={`${forum.className} relative -top-15 text-6xl text-slate-100`}>Nosso propósito</h2>
+          <p className={`${forum.className} text-[1.685rem] leading-relaxed text-slate-100`}>
+            Nascida do desejo de oferecer ao público uma experiência de luxo sem complicações, Maison Privée é fruto de um sonho e de uma forte vontade de simplificar o acesso às grandes marcas...
+          </p>
+        </motion.div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-zinc-900 text-white py-10">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div className="text-2xl font-light tracking-wide">Maison Privée</div>
+          <div className="flex items-center gap-2">
+            <a href="mailto:contato@maisonprivee.com" className="hover:underline text-sm">contato@maisonprivee.com</a>
+          </div>
+          <div className="flex items-center gap-4 text-sm">
+            <a href="#" className="hover:underline">Facebook</a>
+            <a href="#" className="hover:underline">Twitter</a>
+            <a href="https://www.instagram.com/maisonprivee.official/" className="hover:underline">Instagram</a>
+          </div>
+        </div>
       </footer>
-    </div>
-  );
+    </main>
+  )
 }

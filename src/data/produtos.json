@@ -4,27 +4,27 @@
     "nome": "Camiseta Básica",
     "descricao": "Camiseta confortável feita de algodão 100%.",
     "preco": 49.9,
-    "imagens": ["/produtos/camiseta1.jpg", "/produtos/camiseta2.jpg"]
+    "imagens": ["/bolsa.jpg", "/class.jpg"]
   },
   {
     "slug": "moletom-urbano",
     "nome": "Moletom Urbano",
     "descricao": "Moletom estiloso para dias frios.",
     "preco": 129.9,
-    "imagens": ["/produtos/moletom1.jpg", "/produtos/moletom2.jpg"]
+    "imagens": ["/moletom1.jpg", "/moletom2.jpg"]
   },
   {
     "slug": "camiseta-preta",
     "nome": "Camiseta Preta",
     "descricao": "Estilo urbano e discreto.",
     "preco": 59.9,
-    "imagens": ["/produtos/camiseta-preta1.jpg", "/produtos/camiseta-preta2.jpg"]
+    "imagens": ["/camiseta-preta1.jpg", "/camiseta-preta2.jpg"]
   },
   {
     "slug": "jaqueta-corta-vento",
     "nome": "Jaqueta Corta-Vento",
     "descricao": "Ideal para corridas e aventuras.",
     "preco": 159.9,
-    "imagens": ["/produtos/jaqueta1.jpg", "/produtos/jaqueta2.jpg"]
+    "imagens": ["/jaqueta1.jpg", "/jaqueta2.jpg"]
   }
 ]

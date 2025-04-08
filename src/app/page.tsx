@@ -16,7 +16,7 @@ const forum = Forum({
 export default function Home() {
   return (
     <main>
-      <div className="relative w-screen h-screen">
+      <div className="relative h-screen">
         <div className="absolute inset-0 bg-cover bg-center bg-fixed bg-[url('/maisonn.jpeg')] sm:bg-[url('/dsng2.png')] z-0" />
         <div className="absolute inset-0 bg-black/30 z-10" />
       </div>

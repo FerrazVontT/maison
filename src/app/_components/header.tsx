@@ -13,8 +13,8 @@ export function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md text-black shadow-md">
-            <div className="flex items-center justify-between w-full px-6 py-6 mx-auto max-w-8xl">
+        <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md text-black shadow-md">
+            <div className="flex items-center justify-between w-full px-6 py-5 mx-auto max-w-8xl">
 
                 <div className="hidden md:flex w-[140px]" />
 

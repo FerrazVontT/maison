@@ -1,17 +1,17 @@
-'use client'
+'use client';
 
-import HomeProducts from '../app/_components/HomeProducts';
+import GucciContainer from './_components/GucciContainer';
+import ConteudoHome from './_components/home';
 import Inicio from './_components/Inicio';
 import Proposito from './_components/proposito';
 
-
-
-export default function Home() {
+export default function Page() {
   return (
     <main>
       <Inicio />
-      <HomeProducts />
+      <GucciContainer />
+      <ConteudoHome />
       <Proposito />
     </main>
-  )
+  );
 }
